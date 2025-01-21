@@ -2,8 +2,8 @@ import java.util.List;
 
 public class HandRank implements Comparable<HandRank>{
 
-    private HandRankType type;
-    private List<Card> cards;
+    private final HandRankType type;
+    private final List<Card> cards;
 
     public HandRank(HandRankType type, List<Card> cards) {
         this.type = type;
