@@ -28,6 +28,9 @@ public class HandRank implements Comparable<HandRank>{
         if (this.getType().getScore() != other.getType().getScore()) {
             return this.getType().getScore() - other.getType().getScore();
         }
-        //todo: RankType이 같을 경우 로직 ?
+        for (int i = 0; i < this.getCards().size(); i++) {
+            return cards.get(i).compareTo(other.getCards().get(i));
+        }
+        return 0;
     }
 }
