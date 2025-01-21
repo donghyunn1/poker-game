@@ -41,7 +41,7 @@ public class PokerGame {
                 return false;
             }
         }
-        return false;
+        return true;
     }
 
     private boolean isFlush(List<Card> cards) {
