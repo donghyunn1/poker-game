@@ -27,7 +27,7 @@ public class PokerGame {
     public void dealCards() {
         for (int i = 0; i < 5; i++) {
             for (Player gamePlayer : player) {
-                gamePlayer.addCard(deck.getFirst());
+                gamePlayer.addCard(deck.remove(0));
             }
         }
     }
