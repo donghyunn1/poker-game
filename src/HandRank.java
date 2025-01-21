@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class HandRank implements Comparable<HandRank>{
+class HandRank implements Comparable<HandRank>{
 
     private final HandRankType type;
     private final List<Card> cards;

@@ -1,7 +1,6 @@
-import java.util.Optional;
 import java.util.Scanner;
 
-public class GameController {
+class GameController {
 
     public void start() {
         PokerGame pokerGame = new PokerGame();
@@ -30,8 +29,6 @@ public class GameController {
             System.out.println(player);
         }
 
-
-
         System.out.println("================");
         System.out.println("전체 순위 공개");
         System.out.println("================");
@@ -42,6 +39,7 @@ public class GameController {
                     "(" + player.getHandRank().getType().getRankName() + ")");
             index++;
         }
+
         Player winner = pokerGame.findWinner();
         System.out.println("우승자는: " + winner.getName());
     }

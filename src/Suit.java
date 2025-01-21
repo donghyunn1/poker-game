@@ -1,4 +1,4 @@
-public enum Suit {
+enum Suit {
     SPADE("♠", 4), DIAMOND("♦", 3), HEART("♥", 2), CLUB("♣", 1);
 
     private final String symbol;

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class PokerGame {
+class PokerGame {
 
     List<Player> player;
     private List<Card> deck;

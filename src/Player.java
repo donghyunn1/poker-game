@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player {
+class Player {
     private String name;
     private List<Card> cards;
     private HandRank handRank;
@@ -33,6 +33,6 @@ public class Player {
 
     @Override
     public String toString() {
-        return "name: " + name + "(cards: " + cards + "handRank: " + handRank + ")";
+        return "name: " + name + " (cards: " + cards + " handRank: " + handRank + ")";
     }
 }
