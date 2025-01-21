@@ -2,7 +2,7 @@ import java.util.*;
 
 public class PokerGame {
 
-    private List<Player> player;
+    List<Player> player;
     private List<Card> deck;
 
     public PokerGame() {
@@ -90,7 +90,7 @@ public class PokerGame {
         }
     }
 
-    private Optional<Player> findWinner() {
-        return player.stream().max(Comparator.comparing(Player::getHandRank));
+    public Player findWinner() {
+        return Collections.max(player, Comparator.comparing(Player::getHandRank));
     }
 }

@@ -30,4 +30,9 @@ public class Player {
     public void setHand(HandRank hand) {
         this.handRank = hand;
     }
+
+    @Override
+    public String toString() {
+        return "name: " + name + "(cards: " + cards + "handRank: " + handRank + ")";
+    }
 }
