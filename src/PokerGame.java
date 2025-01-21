@@ -89,4 +89,8 @@ public class PokerGame {
             }
         }
     }
+
+    private Optional<Player> findWinner() {
+        return player.stream().max(Comparator.comparing(Player::getHandRank));
+    }
 }

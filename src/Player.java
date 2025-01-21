@@ -4,7 +4,7 @@ import java.util.List;
 public class Player {
     private String name;
     private List<Card> cards;
-    private HandRank hand;
+    private HandRank handRank;
 
     public Player(String name) {
         this.name = name;
@@ -23,11 +23,11 @@ public class Player {
         return cards;
     }
 
-    public HandRank getHand() {
-        return hand;
+    public HandRank getHandRank() {
+        return handRank;
     }
 
     public void setHand(HandRank hand) {
-        this.hand = hand;
+        this.handRank = hand;
     }
 }
