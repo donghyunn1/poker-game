@@ -46,7 +46,7 @@ class PokerGame {
 
     private boolean isFlush(List<Card> cards) {
         for (int i = 1; i < cards.size(); i++) {
-            if (cards.get(i).getSuit().getSymbol() != cards.get(i-1).getSuit().getSymbol()) {
+            if (!cards.get(i).getSuit().getSymbol().equals(cards.get(i-1).getSuit().getSymbol())) {
                 return false;
             }
         }
