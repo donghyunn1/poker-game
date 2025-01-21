@@ -21,4 +21,16 @@ public class PokerGame {
         }
         Collections.shuffle(deck);
     }
+
+    private void addPlayer(String name) {
+        player.add(new Player(name));
+    }
+
+    private void dealCards() {
+        for (int i = 0; i < 5; i++) {
+            for (Player gamePlayer : player) {
+                gamePlayer.addCard(deck.getFirst());
+            }
+        }
+    }
 }
