@@ -26,4 +26,8 @@ public class Player {
     public HandRank getHand() {
         return hand;
     }
+
+    public void setHand(HandRank hand) {
+        this.hand = hand;
+    }
 }
