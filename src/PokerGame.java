@@ -20,11 +20,11 @@ public class PokerGame {
         Collections.shuffle(deck);
     }
 
-    private void addPlayer(String name) {
+    public void addPlayer(String name) {
         player.add(new Player(name));
     }
 
-    private void dealCards() {
+    public void dealCards() {
         for (int i = 0; i < 5; i++) {
             for (Player gamePlayer : player) {
                 gamePlayer.addCard(deck.getFirst());
@@ -62,7 +62,7 @@ public class PokerGame {
         return matchedNum;
     }
 
-    private void evaluateHand() {
+    public void evaluateHand() {
 
         for (Player gamePlayer : player) {
             List<Card> hand = gamePlayer.getCards();
