@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class GameController {
@@ -54,14 +55,35 @@ class GameController {
     }
 
     private static void getUserName(Scanner scanner, PokerGame pokerGame) {
-        System.out.print("사용자의 이름을 입력해주세요. : ");
-        String nameOfPlayer = scanner.next();
-        pokerGame.addPlayer(nameOfPlayer);
+        scanner.nextLine();
+        while (true) {
+            System.out.print("사용자의 이름을 입력해주세요. : ");
+            String nameOfPlayer = scanner.nextLine().trim();
+
+            if (nameOfPlayer.isEmpty()) {
+                System.out.println("이름은 공백일 수 없습니다.");
+                continue;
+            }
+            pokerGame.addPlayer(nameOfPlayer);
+            break;
+        }
     }
 
     private static int getNumOfPlayer(Scanner scanner) {
-        System.out.print("게임 참여자 수를 입력해주세요. : ");
-        int numOfPlayer = scanner.nextInt();
-        return numOfPlayer;
+         while (true) {
+             try {
+                 System.out.print("게임 참여자 수를 입력해주세요. : ");
+                 int numOfPlayer = scanner.nextInt();
+                 if (numOfPlayer < 2 || numOfPlayer > 5) {
+                     System.out.println("참여해야하는 인원은 2~5명 사이입니다.");
+                     continue;
+                 }
+                 return numOfPlayer;
+             } catch (InputMismatchException e) {
+                 System.out.println("숫자만 입력해주세요.");
+                 scanner.nextLine();
+             }
+         }
+
     }
 }
