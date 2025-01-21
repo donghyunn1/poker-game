@@ -90,6 +90,11 @@ public class PokerGame {
         }
     }
 
+    public List<Player> sortPlayer() {
+        player.sort(Comparator.comparing(Player::getHandRank).reversed());
+        return player;
+    }
+
     public Player findWinner() {
         return Collections.max(player, Comparator.comparing(Player::getHandRank));
     }

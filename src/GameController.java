@@ -30,6 +30,18 @@ public class GameController {
             System.out.println(player);
         }
 
+
+
+        System.out.println("================");
+        System.out.println("전체 순위 공개");
+        System.out.println("================");
+
+        int index = 1;
+        for (Player player: pokerGame.sortPlayer()) {
+            System.out.println(index +"등: " + player.getName() +
+                    "(" + player.getHandRank().getType().getRankName() + ")");
+            index++;
+        }
         Player winner = pokerGame.findWinner();
         System.out.println("우승자는: " + winner.getName());
     }
